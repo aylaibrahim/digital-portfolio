@@ -1,0 +1,451 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.menu-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    font-size: 14px;
+    color: #fff;
+    z-index: 10;
+}
+
+.menu-bar .left-menu,
+.menu-bar .right-menu {
+    display: flex;
+    gap: 15px;
+}
+
+.menu-bar .menu-item {
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.menu-bar .menu-item:hover {
+    opacity: 0.6;
+}
+
+#homescreen {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 50px);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+}
+
+.home-text {
+    font-family: 'Instrument Serif', sans-serif;
+    font-size: 3rem;
+    color: #fff;
+    line-height: 1.5;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    padding-left: 40px;
+    padding-bottom: 50px;
+}
+
+.background {
+    background-color: grey;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.dock {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    max-width: 600px;
+    height: 70px;
+    background: rgba(0, 0, 0, 0.149);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.355);
+    z-index: 10;
+}
+
+.dock-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease;
+    position: relative;
+}
+
+.icon::before {
+    content: attr(data-name); 
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgb(63, 63, 63);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.icon::after {
+    content: '';
+    position: absolute;
+    top: -17px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(63, 63, 63) transparent transparent transparent;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none; 
+}
+
+.icon:hover::before,
+.icon:hover::after {
+    opacity: 1; 
+    transform: translateX(-50%) translateY(-5px); 
+}
+
+.icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+    filter: drop-shadow(1px 1px 3px rgb(40, 40, 40));
+}
+
+.icon:hover {
+    transform: scale(1.2) translateY(-10px);
+}
+
+.folder-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+    border: none;
+    background: none;
+    position: absolute;
+}
+
+.folder-button img {
+    width: 80px; 
+    height: 80px;
+    object-fit: contain;
+}
+
+.folder-button span {
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #fff;
+    text-shadow: 0px 2px 6px rgba(0, 0, 0, 1); 
+}
+
+.folder-button:active {
+    filter: brightness(0.8);
+    transform: scale(0.90);
+}
+
+.window {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px; 
+    height: 500px; 
+    background: #f5f5f7;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    overflow: hidden;
+}
+
+.window-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: #e8e8e8;
+    border-bottom: 1px solid #d0d0d0;
+    border-radius: 10px 10px 0 0;
+}
+
+.window-controls {
+    display: flex;
+    gap: 6px;
+    margin-right: 10px;
+}
+
+.window-control {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.window-control.close {
+    background: #ff5f56;
+}
+
+.window-control.minimize {
+    background: #ffbd2e;
+}
+
+.window-control.maximize {
+    background: #27c93f;
+}
+
+.window-title {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+.window-content {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    background: #fff;
+    height: calc(100% - 40px);
+    overflow-y: auto; 
+    overflow-x: hidden;
+}
+
+.window-content h1 {
+    padding-bottom: 10px;
+}
+
+.gallery-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.gallery {
+    display: flex;
+    gap: 2px; 
+}
+
+.gallery img {
+    width: 700px;
+    height: 250px;
+    object-fit: cover; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.271); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+    position: relative;
+    padding: 15px;
+}
+
+.project-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    opacity: 1;
+    transition: opacity 0.7s ease;
+}
+
+.project-image img {
+    width: 300px;
+    height: 200px;
+    object-fit: fill;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project-image{
+    position: relative;
+}
+
+.project-image button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ff2aff;
+    padding: 5px 5px;
+    cursor: pointer;
+    font-size: 10px;
+    transition: color 0.2s ease-in-out;
+}
+
+.project-image button:hover {
+    color: #9d0082;
+}
+
+.project-details {
+    flex: 1;
+}
+
+.project-details h2 {
+    margin-bottom: 15px;
+}
+
+.project-tags {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.tag {
+    background-color: #001aff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+}
+
+.project-description {
+    font-size: 14px;
+    color: #333;
+}
+
+.arrow {
+    cursor: pointer;
+    font-size: 24px;
+    color: #000000;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 7px;
+    user-select: none;
+    transition: color 0.3s ease;
+}
+
+.arrow:hover {
+    color: #00ff26;
+}
+
+.left-arrow {
+    position: absolute;
+    left: -20px;
+}
+
+.right-arrow {
+    position: absolute;
+    right: -20px;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+.text p {
+    padding-bottom: 140px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+.word {
+    font-size: 100px;
+    position: absolute;
+    /* width: 280px; */
+    opacity: 0;
+  }
+  
+.letter {
+    display: inline-block;
+    position: relative;
+    /* float: left; */
+    transform: translateZ(25px);
+    transform-origin: 50% 50% 25px;
+  }
+  
+.letter.out {
+    transform: rotateX(90deg);
+    transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  
+.letter.behind {
+    transform: rotateX(-90deg);
+  }
+  
+.letter.in {
+    transform: rotateX(0deg);
+    transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+.hobby-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.hobby {
+    display: flex;
+    gap: 2px; 
+}
+
+.hobby img {
+    width: 700px;
+    height: 250px;
+    object-fit: cover; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.271); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hobby-text {
+    font-family: 'Instrument serif', sans-serif;
+    font-size: 130px;
+    font-style: italic;
+    color: #9d0082;
+}
+
+.hobby-desc {
+    font-family: 'Instrument serif', sans-serif;
+    font-size: 25px;
+    color: #000000;
+}

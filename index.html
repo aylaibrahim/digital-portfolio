@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/instrument-serif" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>ayla portfolio</title>
+</head>
+<body>
+
+<div class="menu-bar">
+    <div class="left-menu">
+        <span class="menu-item"></span>
+        <span class="menu-item"><span style="font-weight: bold; color: blue;">aylaibrahim</span></span>
+        <span class="menu-item">File</span>
+        <span class="menu-item">Edit</span>
+        <span class="menu-item">View</span>
+        <span class="menu-item">Go</span>
+        <span class="menu-item">Window</span>
+        <span class="menu-item">Help</span>
+    </div>
+    <div class="right-menu">
+        <span class="menu-item">Wi-Fi</span>
+        <span class="menu-item">Battery</span>
+        <span class="menu-item">Time</span>
+    </div>
+</div>
+
+<section id="homescreen">
+    <div class="home-text">
+            <div class="text">
+                <p>
+                    <span class="word">Welcome,</span>
+                    <span class="word">Üdvözöljük,</span>
+                    <span class="word">Willkommen,</span>
+                    <span class="word">Bienvenue,</span>
+                    <span class="word">ようこそ,</span>
+                </p>
+            </div>
+        to <span style="background-color: blue"> Ayla's portfolio</span> website! Find out <br>
+        more by clicking on the <span style="color: yellow;">folders...</span>
+    </div>
+
+    <div class="folder-button" id="about-folder" style="top: 250px; left:900px;">
+        <img src="images/foldericon.png">
+        <span>about</span>
+    </div>
+
+    <div class="folder-button" id="projects-folder" style="top: 200px; left: 700px;">
+        <img src="images/foldericon.png">
+        <span>projects</span>
+    </div>
+
+    <div class="folder-button" id="hobbies-folder" style="top: 400px; left: 1000px;">
+        <img src="images/foldericon.png">
+        <span>hobbies</span>
+    </div>
+
+    <div class="folder-button" id="contact-folder" style="top: 500px; left: 800px;">
+        <img src="images/foldericon.png">
+        <span>contact</span>
+    </div>
+
+    <div class="folder-button" id="resume-pdf" style="top: 100px; left: 1000px;" data-type="pdf" data-target="ayla ibrahimova resume new copy.pdf">
+        <img src="images/pdficon.png">
+        <span>resume</span>
+    </div>
+    
+    <div class="folder-button" id="github-link" style="top: 250px; left: 1100px;" data-type="link" data-target="https://github.com/aylaibrahim">
+        <img src="images/safariicon.png">
+        <span>github profile</span>
+    </div>
+
+    <div class="folder-button" id="leetcode-link" style="top: 500px; left: 1150px;" data-type="link" data-target="https://leetcode.com/u/aylaibrahim/">
+        <img src="images/safariicon.png">
+        <span>leetcode profile</span>
+    </div>
+    
+</section>
+
+<div id="window" class="window">
+    <div class="window-header">
+        <div class="window-controls">
+            <span class="window-control close"></span>
+            <span class="window-control minimize"></span>
+            <span class="window-control maximize"></span>
+        </div>
+        <div class="window-title">about</div>
+    </div>
+    <div class="window-content">
+        <h1><span style="font-family: Instrument serif; font-style: italic;">About me...</span></h1>
+        <p>Hello! I'm Ayla, a 2nd year Computer Science student at ELTE, who is passionate about web development, design, and digital art. 
+            I thrive on building creative, beautiful, and functional solutions.</p> <br>
+
+        <p><span style="background-color: yellow;">My skills include: HTML, CSS, JS, PHP, Java, SQL, C#, Python, React.js. I am also familiar with GIT.</span></p> <br>
+        
+        <p>I have been working with web developement and Java the longest. Currently, I am taking a course on React.js to expand my websites functional capabilities. In the near future,
+        my focus will be on expanding my project variety, using as many skills as I have learned in university and on my own, and UX/UI design.</p> <br>
+        
+        <p>Despite my introduction focusing so much on web developement, I am also passionate in software developement. The classes in my university allow us to give it a try through creating 
+        fun games ranging from very simple to very complex, like the current group project I am working on that will take a semesters time to complete. </p> <br>
+    
+        <p>Something that is tough for me to love is taking on unknown things, but these days I try to put myself in positions where I am not so confident in order to gain more practical knowledge.</p> <br>
+    
+        <p>I chose this path because Computer Science is a fresh field that keeps evolving, and will always give me something new to learn for years ahead :)</p>
+        
+        <div class="gallery-container">
+            <div class="gallery">
+                <img src="images/image1.jpg">
+                <img src="images/image2.jpg">
+                <img src="images/image3.jpg">
+                <img src="images/image4.jpg">
+                <img src="images/image5.jpg">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="projects-window" class="window">
+    <div class="window-header">
+        <div class="window-controls">
+            <span class="window-control close"></span>
+            <span class="window-control minimize"></span>
+            <span class="window-control maximize"></span>
+        </div>
+        <div class="window-title">projects</div>
+    </div>
+    <div class="window-content">
+        <h1><span style="font-family: Instrument serif; font-style: italic;">My Projects (currently editing this section)</span></h1>
+
+        <div class="project-container">
+            <div class="arrow left-arrow" onclick="changeProject(-1)">&#10094;</div>
+        
+            <div class="project-content">
+                <div class="project-image">
+                    <img src="images/project1.png">
+                    <button>view on github</button>
+                </div>
+                <div class="project-details">
+                    <h2>name</h2>
+                    <div class="project-tags">
+                        <span class="tag">tg</span>
+                        <span class="tag">tg</span>
+                        <span class="tag">tg</span>
+                    </div>
+                    <div class="project-description">
+                        <p>description</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="arrow right-arrow" onclick="changeProject(1)">&#10095;</div>
+        </div>
+    </div>
+</div>
+
+<div id="hobbies-window" class="window">
+    <div class="window-header">
+        <div class="window-controls">
+            <span class="window-control close"></span>
+            <span class="window-control minimize"></span>
+            <span class="window-control maximize"></span>
+        </div>
+        <div class="window-title">hobbies</div>
+    </div>
+    <div class="window-content">
+        <h1><span style="font-family: Instrument serif; font-style: italic;">My Hobbies</span></h1>
+        <div class="hobby-container">
+            <p class="hobby-desc"><span style="background-color: #d48ac8;">photography</span> (using a digital camera ~ sony cybershot DCS-S730)</p>
+            <div class="hobby">
+                <img src="images/hobby1.jpg">
+                <img src="images/hobby2.jpg">
+                <img src="images/hobby3.jpg">
+                <img src="images/hobby4.jpg">
+                <img src="images/hobby5.jpg">
+                <img src="images/hobby6.jpg">
+                <img src="images/hobby7.jpg">
+                <img src="images/hobby8.jpg">
+                <img src="images/hobby9.jpg">
+            </div>
+        </div>
+        <div class="hobby-container">
+            <p class="hobby-desc"><span style="background-color: #d48ac8;">digital art</span> (using an ipad 9gen & procreate)</p>
+            <div class="hobby">
+                <img src="images/artwork1.png">
+                <img src="images/artwork8.png">
+                <img src="images/artwork2.png">
+                <img src="images/artwork7.png">
+                <img src="images/artwork3.png">
+                <img src="images/artwork5.png">
+                <img src="images/artwork4.png">
+                <img src="images/artwork6.png">
+                <img src="images/artwork9.png">
+            </div>
+        </div>
+        <p class="hobby-text">More to be added later!</p>
+        <!-- <div class="hobby-container">
+            graphic design (photoshop)
+            <div class="hobby">
+                <img src="images/image1.jpg">
+                <img src="images/image2.jpg">
+                <img src="images/image3.jpg">
+                <img src="images/image4.jpg">
+                <img src="images/image5.jpg">
+            </div>
+        </div>
+        <div class="hobby-container">
+            traditional art
+            <div class="hobby">
+                <img src="images/image1.jpg">
+                <img src="images/image2.jpg">
+                <img src="images/image3.jpg">
+                <img src="images/image4.jpg">
+                <img src="images/image5.jpg">
+            </div>
+        </div>
+        <div class="hobby-container">
+            video editing
+            <div class="hobby">
+                <img src="images/image1.jpg">
+                <img src="images/image2.jpg">
+                <img src="images/image3.jpg">
+                <img src="images/image4.jpg">
+                <img src="images/image5.jpg">
+            </div>
+        </div> -->
+    </div>
+</div>
+
+<div id="contact-window" class="window">
+    <div class="window-header">
+        <div class="window-controls">
+            <span class="window-control close"></span>
+            <span class="window-control minimize"></span>
+            <span class="window-control maximize"></span>
+        </div>
+        <div class="window-title">contact</div>
+    </div>
+    <div class="window-content">
+        <h1><span style="font-family: Instrument serif; font-style: italic;">Contact Me (currently editing this section)</span></h1>
+        <a href="https://www.linkedin.com/in/ayla-ibrahimova-6143582a3/" target="_blank">➤ linkedin</a> <br>
+        <a href="https://github.com/aylaibrahim" target="_blank">➤ github</a> <br>
+        <a href="https://leetcode.com/u/aylaibrahim/" target="_blank">➤ leetcode</a> <br>
+        <a href="https://www.instagram.com/fyoomi/" target="_blank">➤ instagram</a> <br>
+        <a href="https://t.me/evang3lion" target="_blank">➤ telegram</a> <br>
+        <p>➤ call me: +(36) 20 238 7483</p>
+        <p>➤ email me: ayla.ibragim8@gmail.com</p>
+        
+    </div>
+</div>
+
+<div class="background"></div>
+
+<div class="dock">
+    <div class="dock-icons">
+        <div class="icon" data-name="About"><img src="images/icon1.png"></div>
+        <div class="icon" data-name="Projects"><img src="images/icon2.png"></div>
+        <div class="icon" data-name="Hobbies"><img src="images/icon4.png"></div>
+        <div class="icon" data-name="contact"><img src="images/icon3.png"></div>
+        <div class="icon" data-name="Curently Editing this Section"><img src="images/icon5.png"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
