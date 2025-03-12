@@ -117,44 +117,174 @@
     </div>
 </div>
 
-
 <div id="projects-window" class="window">
     <div class="window-header">
-        <div class="window-controls">
-            <span class="window-control close"></span>
-            <span class="window-control minimize"></span>
-            <span class="window-control maximize"></span>
-        </div>
-        <div class="window-title">projects</div>
+      <div class="window-controls">
+        <span class="window-control close"></span>
+        <span class="window-control minimize"></span>
+        <span class="window-control maximize"></span>
+      </div>
+      <div class="window-title">projects</div>
     </div>
     <div class="window-content">
-        <h1><span style="font-family: Instrument serif; font-style: italic;">My Projects (currently editing this section)</span></h1>
+      <h1><span style="font-family: Instrument serif; font-style: italic;">My Projects (currently being edited...)</span></h1>
+      <p><span style="color: #9d0082; font-size: 15px; font-style: italic;">some projects which are hosted on a website are showcased as such, their source codes can be accessed through my github...</span></p><br>
+      <div class="projects-scrollable">
 
-        <div class="project-container">
-            <div class="arrow left-arrow" onclick="changeProject(-1)">&#10094;</div>
-        
-            <div class="project-content">
-                <div class="project-image">
-                    <img src="images/project1.png">
-                    <button>view on github</button>
-                </div>
-                <div class="project-details">
-                    <h2>name</h2>
-                    <div class="project-tags">
-                        <span class="tag">tg</span>
-                        <span class="tag">tg</span>
-                        <span class="tag">tg</span>
-                    </div>
-                    <div class="project-description">
-                        <p>description</p>
-                    </div>
-                </div>
+        <div class="project-section">
+          <div class="project-image">
+            <img src="images/project1.png">
+            <button onclick="window.open('https://github.com/aylaibrahim/capybara-game', '_blank')">view on github</button>
+          </div>
+          <div class="project-details">
+            <h2>Capybara Game</h2>
+            <div class="project-tags">
+              <span class="tag">Java</span>
+              <span class="tag">JavaFX</span>
+              <span class="tag">SQL</span>
+              <span class="tag">University</span>
             </div>
-        
-            <div class="arrow right-arrow" onclick="changeProject(1)">&#10095;</div>
+            <div class="project-description">
+              <p>This project was done in Apache NetBeans for Programming Technology class. The goal is to guide the capybara through the forest to gather baskets and avoid crocodiles. 
+                It features 10 randomly generated levels and 3 base player health. When the game ends, the player has the option to write their name and save their score in the database (JDBC),
+                 however only top 10 scores are displayed (based on speed & difficulty achieved within a round).</p>
+            </div>
+          </div>
         </div>
+  
+        <div class="project-section">
+          <div class="project-image">
+            <img src="images/project2.png">
+            <button onclick="window.open('https://aylaibrahim.github.io/dressup-game/', '_blank')">view on github</button>
+          </div>
+          <div class="project-details">
+            <h2>Dress-up Game</h2>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Procreate</span>
+              <span class="tag">Personal</span>
+            </div>
+            <div class="project-description">
+              <p>This project is a Web based Dress-up game. 
+                I drew all the assets using Procreate and utilized the JavaScript and CSS together to allow the clothes to be 
+                layered and their visibility to be toggled on top of a base body. It is hosted through GitHub Pages and is currently 
+                an ongoing project as I intend to add more clothing designs and “game” functionality.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-section">
+          <div class="project-image">
+            <img src="images/project3.png">
+            <button onclick="window.open('https://github.com/aylaibrahim/pomodoro-todo-app', '_blank')">view on github</button>
+          </div>
+          <div class="project-details">
+            <h2>Pomodoro To-do App</h2>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Electron.js</span>
+              <span class="tag">Personal</span>
+            </div>
+            <div class="project-description">
+              <p>This project is a web based desktop app currently only available for Mac. It includes a simple pomodoro and todo list 
+                where the user can time their studies, write down their tasks, view the current date and time. It is my first project to be a desktop app! Soon,
+                it will be available for download through github, for now it is showcased as a website which is also fully functional.</p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+         <div class="project-section">
+          <div class="project-image">
+            <img src="images/project4.png">
+            <button onclick="window.open('https://github.com/aylaibrahim/matching-game', '_blank')">view on github</button>
+          </div>
+          <div class="project-details">
+            <h2>Matching Game</h2>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Pygame</span>
+              <span class="tag">Procreate</span>
+              <span class="tag">University</span>
+            </div>
+            <div class="project-description">
+              <p>This game was made in my Python elective class as an assignment. It is a very simple picture matching game, where the objective is 
+                to match 3 seaweeds and 3 rice bowls to make an Onigiri dish. I have drawn all the assets using Procreate. Currently, 
+                I am adding more complexity to the game as I want to expand this assignment into a personal project to learn Python and Pygame in better depth.</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="project-section">
+            <div class="project-image">
+              <img src="images/project5.png">
+              <button onclick="window.open('https://aylaibrahim.github.io/valentines-2025/', '_blank')">view on github</button>
+            </div>
+            <div class="project-details">
+              <h2>Valentines Game</h2>
+              <div class="project-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Procreate</span>
+                <span class="tag">Personal</span>
+              </div>
+              <div class="project-description">
+                <p>This simple game was made as a Valentines day gift to my boyfriend. 
+                    It is just a small one day project through which I wanted to showcase that coding and creating can be 
+                    fun and my coursework knowledge can be utilized for personal stuff/fun!</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-section">
+            <div class="project-image">
+              <img src="images/project6.png">
+              <button onclick="window.open('https://aylaibrahim.github.io/philosophy-website/', '_blank')">view on github</button>
+            </div>
+            <div class="project-details">
+              <h2>Philosophy Website</h2>
+              <div class="project-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">University</span>
+              </div>
+              <div class="project-description">
+                <p>This website was made as an assignment during the Web Developement course where we learned the basics
+                     of Web design and accessibility. It is one of my first creatively free projects that sparked my 
+                     interest in front-end developement. It showcases my love for Philosophy as a hobby :). Simple, but meaningful.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-section">
+            <div class="project-image">
+              <img alt="No UI, terminal based">
+              <button onclick="window.open('https://github.com/aylaibrahim/environment-simulator', '_blank')">view on github</button>
+            </div>
+            <div class="project-details">
+              <h2>Environment Simulator</h2>
+              <div class="project-tags">
+                <span class="tag">C#</span>
+                <span class="tag">Unit testing</span>
+                <span class="tag">University</span>
+              </div>
+              <div class="project-description">
+                <p>This project was an assignment from my OOP class where I applied the singleton pattern. The project works 
+                    through a text file reader and simulates an environment with plants and based on randomly generated conditions determines which 
+                    species go extinct and which stay alive. It also implements unit testing. </p>
+              </div>
+            </div>
+          </div>
+    
     </div>
-</div>
+    </div>
+  </div>
 
 <div id="hobbies-window" class="window">
     <div class="window-header">
