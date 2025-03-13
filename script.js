@@ -110,3 +110,29 @@ function splitLetters(word) {
 
 changeWord();
 setInterval(changeWord, 4000);
+
+const dockIcons = document.querySelectorAll('.dock .icon');
+
+dockIcons.forEach((icon) => {
+    icon.addEventListener('click', () => {
+        const name = icon.getAttribute('data-name');
+        const type = icon.getAttribute('data-type');
+        const target = icon.getAttribute('data-target');
+
+        if (type === 'pdf' || type === 'link') {
+            window.open(target, '_blank');
+        } else {
+            const targetWindowId = `${name}-window`;
+            const targetWindow = document.getElementById(targetWindowId);
+
+            if (targetWindow) {
+                windows.forEach((window) => {
+                    window.style.display = 'none';
+                });
+                targetWindow.style.display = 'block';
+            } else {
+                console.error(`Window with ID "${targetWindowId}" not found.`);
+            }
+        }
+    });
+});

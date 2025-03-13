@@ -65,7 +65,7 @@ body {
 }
 
 .background {
-    background-color: grey;
+    background-color: rgb(162, 162, 162);
     position: fixed;
     top: 0;
     left: 0;
@@ -95,7 +95,7 @@ body {
 
 .dock-icons {
     display: flex;
-    gap: 10px;
+    gap: 5px;
 }
 
 .icon {
