@@ -318,15 +318,13 @@ body {
 }
   
 .project-image button {
-    position: absolute;
+    position: relative;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 10px;
-    background-color: #a3a3a3;
-    color: #fff;
+    top: 5px;
+    background-color: transparent;
+    color: #000000;
     border: none;
-    padding: 4px 8px;
-    border-radius: 5px;
     cursor: pointer;
     font-size: 14px;
     transition: color 0.3s ease;
