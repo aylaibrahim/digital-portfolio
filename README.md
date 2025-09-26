@@ -4,4 +4,4 @@ It incorporates an MacOS type look, with cool and fun layouts for 4 sections: Ab
 
 This site was built and is hosted using [GitHub Pages](https://aylaibrahim.github.io/digital-portfolio/).
 
-![screenshot of the website](https://github.com/user-attachments/assets/4a65762e-e561-4d2e-b5db-bfeebb289551)
+![screenshot of the website](https://github.com/user-attachments/assets/d4c00ecf-e4fd-4fc0-9c51-3d864c8357f0)
